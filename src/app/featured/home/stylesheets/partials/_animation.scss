@@ -1,0 +1,40 @@
+.animation {
+  max-width: 410px;
+  height: 334px;
+  background-image: url("../../../assets/images/rock-paper-scissors.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  animation: play 1.5s steps(3) infinite;
+}
+
+@keyframes play {
+  100% {
+    background-position: -1080px;
+  }
+}
+
+.animation-pause {
+  animation-play-state: paused;
+}
+
+.animation-rock {
+  animation: none;
+  background-size: contain;
+  background-position: center;
+  background-image: url("../../../assets/images/rock.png");
+}
+
+.animation-paper {
+  animation: none;
+  background-size: contain;
+  background-position: center;
+  background-image: url("../../../assets/images/paper.png");
+}
+
+.animation-scissors {
+  animation: none;
+  background-size: contain;
+  background-position: center;
+  background-image: url("../../../assets/images/scissors.png");
+}

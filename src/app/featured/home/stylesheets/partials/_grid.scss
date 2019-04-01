@@ -1,0 +1,45 @@
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    "middle"
+    "left"
+    "right"
+    "bottom";
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+}
+
+.left {
+  grid-area: left;
+  position: relative;
+}
+
+.middle {
+  grid-area: middle;
+}
+
+.right {
+  grid-area: right;
+  position: relative;
+}
+
+.bottom {
+  grid-area: bottom;
+}
+
+.justify-self-center {
+  justify-self: center;
+}
+
+@media only screen and (min-width: 599px) {
+  .grid-container {
+    display: grid;
+    grid-template-areas:
+      "left middle right"
+      "bottom bottom bottom";
+    grid-template-columns: 100px 1fr 100px;
+    grid-template-rows:
+      1fr
+      auto;
+  }
+}

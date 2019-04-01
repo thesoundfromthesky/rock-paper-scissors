@@ -1,0 +1,43 @@
+<div class="flex-column-container align-items-center">
+  <div class="grid-container">
+    <aside class="left">
+      <p class="font">
+        Win:{{ win }}&nbsp; Lose:{{ lose }}&nbsp; Rate:{{ winRate }}%
+      </p>
+      <p class="font">You:{{ playerThrew }}</p>
+      <p class="font">AI:{{ AIThrew }}</p>
+      <button *ngIf="playerThrew !== ''" class="try-again" (click)="tryAgain()">
+        Try Again!
+      </button>
+    </aside>
+    <main #middle class="middle animation"></main>
+    <aside class="right">
+      <button *ngIf="win !== 0 || lose !== 0" class="reset" (click)="reset()">
+        Reset
+      </button>
+    </aside>
+    <section class="bottom justify-self-center">
+      <button
+        class="button"
+        (click)="updateResult(0)"
+        [attr.disabled]="playerThrew !== '' ? 'disabled' : null"
+      >
+        Rock
+      </button>
+      <button
+        class="button"
+        (click)="updateResult(1)"
+        [attr.disabled]="playerThrew !== '' ? 'disabled' : null"
+      >
+        Paper
+      </button>
+      <button
+        class="button"
+        (click)="updateResult(2)"
+        [attr.disabled]="playerThrew !== '' ? 'disabled' : null"
+      >
+        Scissors
+      </button>
+    </section>
+  </div>
+</div>
